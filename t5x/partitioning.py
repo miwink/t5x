@@ -364,7 +364,7 @@ def default_mesh(num_partitions: int,
     return get_gpu_mesh(num_partitions)
 
   mps = None
-  if device_kind in ('TPU v2', 'TPU v3'):
+  if device_kind in ('Cloud TPU', 'TPU v2', 'TPU v3'):
     if num_partitions == 1:
       mps = (1, 1, 1, 1)
     elif num_partitions == 2:
